@@ -10,7 +10,17 @@ export class HomePage {
   constructor(private sms: SMS) { }
 
 
-  click(){
-    this.sms.send('8838373520', 'Hello world!');
+  click() {
+    var options: {
+      replaveLineBreaks: true,
+      android: {
+        intent: 'INTENT'
+      }
+    }
+    this.sms.send('012345682', 'Hello world!', options).then(() => {
+      alert("Message Send");
+    }).catch((err) => {
+      alert("Error")
+    });
   }
 }
