@@ -27,7 +27,7 @@ export class HomePage {
     });
   }
   Verify() {
-    if (this.otp = this.getotp) {
+    if (this.otp == this.getotp) {
       alert("User Verified")
     }
   }
