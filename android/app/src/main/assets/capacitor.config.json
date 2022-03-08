@@ -1,0 +1,6 @@
+{
+	"appId": "io.ionic.starter",
+	"appName": "otp-auth",
+	"webDir": "www",
+	"bundledWebRuntime": false
+}
