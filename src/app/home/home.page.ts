@@ -9,7 +9,9 @@ export class HomePage {
 
   constructor(private sms: SMS) { }
 
-
+  number: any = "";
+  otp: any = "";
+  getotp: any = ""
   click() {
     var options: {
       replaveLineBreaks: true,
@@ -17,10 +19,19 @@ export class HomePage {
         intent: 'INTENT'
       }
     }
-    this.sms.send('8838373520', 'Hello world!', options).then(() => {
-      alert("Message Send");
+    this.otp = Math.floor(100000 + Math.random() * 900000);
+    this.sms.send(this.number, this.otp + "24Hrs Verification OTP code", options).then(() => {
+      alert("Message Send" + this.otp);
     }).catch((err) => {
       alert("Error")
     });
   }
+  Verify() {
+    if (this.otp = this.getotp) {
+      alert("User Verified")
+    }
+  }
+
+
+
 }
